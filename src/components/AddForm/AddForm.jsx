@@ -9,10 +9,11 @@ export const AddForm = ({ closeForm }) => {
 
   const handleSubmit = event => {
     event.preventDefault();
+
     dispatch(
       addContact({
         name: event.target.elements.name.value,
-        phone: event.target.elements.phone.value,
+        number: event.target.elements.phone.value,
       })
     );
     closeForm();
