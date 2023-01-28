@@ -8,12 +8,16 @@ import { App } from 'components/App';
 import { store, persistor } from 'redux/store';
 import './index.css';
 
+import { ChakraProvider } from '@chakra-ui/react';
+
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <Provider store={store}>
       <PersistGate persistor={persistor}>
         <BrowserRouter>
-          <App />
+          <ChakraProvider>
+            <App />
+          </ChakraProvider>
         </BrowserRouter>
       </PersistGate>
     </Provider>
