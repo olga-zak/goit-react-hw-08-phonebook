@@ -4,9 +4,8 @@ import { logOut } from 'redux/auth/auth-operations';
 import { selectName } from 'redux/auth/auth-selectors';
 
 import { Text, Button } from '@chakra-ui/react';
-//import { Button, ButtonGroup } from '@chakra-ui/react';
 
-export const UserAuthMenu1 = () => {
+export const UserAuthMenu = () => {
   const dispatch = useDispatch();
   const name = useSelector(selectName);
   return (
@@ -21,17 +20,6 @@ export const UserAuthMenu1 = () => {
       <Button colorScheme="teal" size="lg" onClick={() => dispatch(logOut())}>
         LogOut
       </Button>
-    </>
-  );
-};
-
-export const UserAuthMenu = () => {
-  const dispatch = useDispatch();
-  const name = useSelector(selectName);
-  return (
-    <>
-      <p>{`Welcome, ${name}!`}</p>
-      <button onClick={() => dispatch(logOut())}>LogOut</button>
     </>
   );
 };

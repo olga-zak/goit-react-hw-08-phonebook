@@ -11,8 +11,7 @@ export const StyledNavLink = styled(NavLink)`
   &:hover {
     text-decoration: underline;
   }
-
-  &:not(:last-child) {
-    margin-right: 48px;
+  &.active {
+    text-decoration: underline;
   }
 `;

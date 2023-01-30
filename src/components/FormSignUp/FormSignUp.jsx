@@ -11,13 +11,12 @@ import {
   InputLeftElement,
   chakra,
   Box,
-  Link,
   Avatar,
   FormControl,
-  FormHelperText,
   InputRightElement,
 } from '@chakra-ui/react';
 import { FaUserAlt, FaLock } from 'react-icons/fa';
+import { StyledLink } from 'components/FormLogIn/FormLogin.styled';
 
 const CFaUserAlt = chakra(FaUserAlt);
 const CFaLock = chakra(FaLock);
@@ -137,12 +136,9 @@ export const FormSignUp = () => {
                     </Button>
                   </InputRightElement>
                 </InputGroup>
-                <FormHelperText textAlign="right">
-                  <Link>forgot password?</Link>
-                </FormHelperText>
               </FormControl>
               <Button
-                borderRadius={0}
+                borderRadius=".5rem"
                 type="submit"
                 variant="solid"
                 colorScheme="teal"
@@ -155,10 +151,7 @@ export const FormSignUp = () => {
         </Box>
       </Stack>
       <Box>
-        New to us?{' '}
-        <Link color="teal.500" href="#">
-          Sign Up
-        </Link>
+        Already have an account? <StyledLink to="/login">Log In</StyledLink>
       </Box>
     </Flex>
   );

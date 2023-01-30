@@ -10,13 +10,8 @@ import { AddForm } from 'components/AddForm/AddForm';
 import { FilterForm } from 'components/FilterForm/FilterForm';
 import { Loader } from 'components/Loader/Loader';
 
-// import { RegisterForm } from './RegisterForm/RegisterForm';
-// import { LogInForm } from './LogInForm/LogInForm';
-// import { UserAuthMenu } from './UserAuthMenu/UserAuthManu';
-
 import { Wrapper, FormsWrapper } from './ContactsPage.styled';
 
-//export const App = () => {
 export const ContactsPage = () => {
   const [isContactsListShown, setIsContactsListShown] = useState(false);
   const [isAddFormShown, setIsAddFormShown] = useState(false);
@@ -40,9 +35,6 @@ export const ContactsPage = () => {
 
   return (
     <>
-      {/* <UserAuthMenu />
-      <RegisterForm />
-      <LogInForm /> */}
       {isContactsListShown ? (
         <>
           {isLoading && <Loader />}
