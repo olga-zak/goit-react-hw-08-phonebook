@@ -3,8 +3,6 @@ import { getFilterValue } from 'redux/filter/filterSlice';
 
 import { Input } from '@chakra-ui/react';
 
-import { Label } from './FilterForm.styled';
-
 export const FilterForm = () => {
   const dispatch = useDispatch();
   const handleChange = event => {
