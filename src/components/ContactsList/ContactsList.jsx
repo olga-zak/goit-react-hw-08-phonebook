@@ -4,7 +4,9 @@ import { getContacts } from 'redux/contacts/contacts-selectors';
 import { deleteContact } from 'redux/contacts/contacts-operations';
 import { getFilterQueue } from 'redux/filter/filter-selectors';
 
-import { List, Item, Name, Phone, Button } from './ContactsList.styled';
+import { List, Item, Name, Phone } from './ContactsList.styled';
+import { Button } from '@chakra-ui/button';
+import { Center } from '@chakra-ui/layout';
 
 export const ContactsList = () => {
   const contacts = useSelector(getContacts);
@@ -22,9 +24,15 @@ export const ContactsList = () => {
           <Item key={contact.id}>
             <Name>{contact.name}</Name>
             <Phone>Phone number: {contact.number}</Phone>
-            <Button onClick={() => dispatch(deleteContact(contact.id))}>
-              Delete
-            </Button>
+            <Center>
+              <Button
+                colorScheme="teal"
+                size="lg"
+                onClick={() => dispatch(deleteContact(contact.id))}
+              >
+                Delete
+              </Button>
+            </Center>
           </Item>
         );
       })}

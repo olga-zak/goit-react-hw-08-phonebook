@@ -25,6 +25,7 @@ export const FilterForm = () => {
       size="lg"
       variant="filled"
       focusBorderColor="blue.800"
+      mb="15px"
     />
     // </Label>
   );
